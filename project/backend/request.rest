@@ -1,0 +1,28 @@
+GET http://localhost:5100/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJLaG9pcnVsIEh1c2VpbiIsImVtYWlsIjoiZW1haWxAZ21haWwuY29tIiwiaWF0IjoxNjgwODUzNTQ0LCJleHAiOjE2ODA4NTM1NjR9.MuRu6levxCFUwud1PSfm0eUuq__arxAaSrSv8ut4Eg8
+
+###
+POST http://localhost:5100/users
+Content-Type: application/json
+
+{
+  "name": "Khoirul Husein",
+  "email": "email@gmail.com",
+  "password": "123456",
+  "confPassword": "123453"
+}
+
+###
+POST http://localhost:5100/login
+Content-Type: application/json
+
+{
+  "email": "email@gmail.com",
+  "password": "123456"
+}
+
+###
+GET http://localhost:5100/token
+
+###
+DELETE http://localhost:5100/logout
