@@ -10,30 +10,44 @@
 
 // lemparDadu();
 
-function selamatDatang(name) {
+// function selamatDatang(name) {
 
-  console.log(`Hallo, ${name} Selamat Datang`);
-  console.log('');
+//   console.log(`Hallo, ${name} Selamat Datang`);
+//   console.log('');
 
-}
+// }
 
-selamatDatang('Nani');
+// selamatDatang('Nani');
 
 // looping js node.js
 
-const tech = 'node.js';
+// const tech = 'node.js';
 
-for (let i = 0; i < 3; i++){
+// for (let i = 0; i < 3; i++){
 
-  console.log(`Hello, world this is ${tech}`);
+//   console.log(`Hello, world this is ${tech}`);
 
-}
+// }
 
-const belokKanan = true;
+// const belokKanan = true;
 
-if (belokKanan == false){
-  console.log('belok kekanan');
+// if (belokKanan == false){
+//   console.log('belok kekanan');
+// } else {
+//   console.log('belok kekiri');
+// }
+
+// nested if
+const password = prompt("buat password");
+
+// password harus sepanjang 6 karakter
+if (password.length >= 6){
+  if (password.indexOf(' ') === -1){
+    console.log("Password tervalidasi");
+  } else {
+    console.log("password tidak boleh ada sepasi");
+  }
 } else {
-  console.log('belok kekiri');
+  console.log("Password minimal 6 karakter");
 }
 
