@@ -5,8 +5,7 @@ form.addEventListener('submit', async (e) => {
   document.querySelectorAll('img').forEach((img) => img.remove());
   const keyword = form.elements.query.value;
   const config = {
-    params: { q: keyword, 
-    },
+    params: { q: keyword },
   };
   const res = await axios.get(`http://api.tvmaze.com/search/shows`, config);
   console.log(res.data);
@@ -18,7 +17,7 @@ form.addEventListener('submit', async (e) => {
 const getImages = (shows) => {
   for (let result of shows) {
     if (result.show.image) {
-      const img = document.createElement('p');
+      const img = document.createElement('img');
       img.src = result.show.image.medium;
       document.body.append(img);
     }
