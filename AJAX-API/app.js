@@ -49,20 +49,34 @@
 //   }); 
 
 // membuat lebih sedehana dengan fetch
-const loadPeople = async () => {
-  try {
-    const req = await fetch('https://swapi.dev/api/people/1');
-    const data = await req.json();
-    console.log(data);
+// const loadPeople = async () => {
+//   try {
+//     const req = await fetch('https://swapi.dev/api/people/1');
+//     const data = await req.json();
+//     console.log(data);
   
-    const req2 = await fetch('https://swapi.dev/api/people/2');
-    const data2 = await req2.json();
-    console.log(data2);
+//     const req2 = await fetch('https://swapi.dev/api/people/2');
+//     const data2 = await req2.json();
+//     console.log(data2);
 
-  } catch(err){
-    console.log('error', err);
-  }
+//   } catch(err){
+//     console.log('error', err);
+//   }
 
-};
+// };
 
-loadPeople();
+// loadPeople();
+
+
+// Membuat dengan library axios
+axios
+  .get('https://swapi.dev/api/people/1')
+  
+  .then((res) => {
+    console.log(res.data);
+  })
+  
+  .catch((err) => {
+    console.log(err);
+    alert(err.message);
+  })
