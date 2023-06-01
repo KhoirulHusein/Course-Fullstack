@@ -69,14 +69,28 @@
 
 
 // Membuat dengan library axios
-axios
-  .get('https://swapi.dev/api/people/1')
+// axios
+//   .get('https://swapi.dev/api/people/1')
   
-  .then((res) => {
+//   .then((res) => {
+//     console.log(res.data);
+//   })
+  
+//   .catch((err) => {
+//     console.log(err);
+//     alert(err.message);
+//   })
+
+
+// Membuat lebih dinamis menggunakan id
+const getPeople = async (id) => {
+  try {
+    const res = await axios.get(`https://swapi.dev/api/people/${id}`);
     console.log(res.data);
-  })
-  
-  .catch((err) => {
-    console.log(err);
-    alert(err.message);
-  })
+  } catch (error) {
+    console.log(error);
+    console.log(error.message);
+    console.log(error.response.status);
+    console.log(error.response.data);
+  }
+};
